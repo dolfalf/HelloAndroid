@@ -21,5 +21,24 @@
             android:layout_height="wrap_content"
             android:text="戻る" />
 
+        <LinearLayout
+            android:id="@+id/menuLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <Button
+                android:id="@+id/bgButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="背景色変更する"/>
+
+            <Button
+                android:id="@+id/updateButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ボタン変更する"/>
+        </LinearLayout>
     </LinearLayout>
+
+
 </android.support.constraint.ConstraintLayout>
