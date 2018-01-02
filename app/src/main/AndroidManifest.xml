@@ -44,6 +44,10 @@
             android:label="third actitvity">
         </activity>
 
+        <activity
+            android:name=".SimpleListActivity"
+            android:label="listView actitvity">
+        </activity>
     </application>
 
 </manifest>
