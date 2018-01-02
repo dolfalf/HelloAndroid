@@ -6,13 +6,17 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.Display;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.SubMenu;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 
 /**
@@ -26,6 +30,8 @@ public class FirstActivity extends AppCompatActivity {
     Button opneSecondButton;
     Button menuButton;
     LinearLayout menuLayout;
+
+    Button toastButton;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -47,6 +53,19 @@ public class FirstActivity extends AppCompatActivity {
         menuLayout = findViewById(R.id.menuLayout);
         menuButton = findViewById(R.id.menuButton);
 
+        //Toast Button
+        toastButton = findViewById(R.id.toastButton);
+        toastButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast toast = Toast.makeText(FirstActivity.this, "トスと練習", Toast.LENGTH_LONG);
+
+//                Display display = (WindowManager)getSystemService(WINDOW_SERVICE).getDefaultDisplay();
+                //toast.setGravity(Gravity.TOP, 100,100);
+
+                toast.show();
+            }
+        });
 
     }
 
