@@ -14,5 +14,23 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="新しい画面を開く"/>
+
+        <LinearLayout
+            android:id="@+id/menuLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="右の上のボタンをタップしてください。"/>
+            <Button
+                android:id="@+id/menuButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="コラはボタン"/>
+        </LinearLayout>
+
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>

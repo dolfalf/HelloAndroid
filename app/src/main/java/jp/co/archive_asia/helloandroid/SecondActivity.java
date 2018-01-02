@@ -5,8 +5,11 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.ContextMenu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 
 
 /**
@@ -19,6 +22,10 @@ public class SecondActivity extends AppCompatActivity {
 
     Button openThirdButton;
     Button backFirstButton;
+
+    LinearLayout menuLayerout;
+    Button bgButton;
+    Button updateButton;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -49,6 +56,14 @@ public class SecondActivity extends AppCompatActivity {
                 finish();
             }
         });
+
+        //Context menu
+        menuLayerout = findViewById(R.id.menuLayout);
+        bgButton = findViewById(R.id.bgButton);
+        updateButton = findViewById(R.id.updateButton);
+
+        registerForContextMenu(bgButton);
+        registerForContextMenu(updateButton);
     }
 
     @Override
@@ -56,5 +71,23 @@ public class SecondActivity extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
 
         //TODO: ここでデータを取得できる
+    }
+
+    //Context menu Override
+
+    @Override
+    public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
+        super.onCreateContextMenu(menu, v, menuInfo);
+
+        MenuInflater menuInflater = getMenuInflater();
+
+        if (v == bgButton) {
+            menu.setHeaderTitle("背景変更");
+            menuInflater.inflate(R.menu.menu_bgcolor, menu);
+        }
+
+        if (v == updateButton) {
+            menuInflater.inflate(R.menu.menu_btnupdate, menu);
+        }
     }
 }

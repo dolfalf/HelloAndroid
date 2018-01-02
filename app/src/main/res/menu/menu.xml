@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/itemRed"
+        android:title="背景色（赤）" />
+
+    <item
+        android:id="@+id/itemGreen"
+        android:title="背景色（緑）" />
+    <item
+        android:id="@+id/itemBule"
+        android:title="背景色（青）"/>
+
+    <item android:title="ボタン変更">
+        <menu>
+            <item
+                android:id="@+id/subRotate"
+                android:title="ボタンを45度回転" />
+
+            <item
+                android:id="@+id/subSize"
+                android:title="ボタン2倍拡大" />
+        </menu>
+
+    </item>
+
+</menu>
