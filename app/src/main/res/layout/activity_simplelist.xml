@@ -13,6 +13,16 @@
             <!--android:layout_height="wrap_content"-->
             <!--android:text="戻る"/>-->
 
+        <EditText
+            android:id="@+id/addItemEditText"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="追加したい項目を入力してください。"/>
+        <Button
+            android:id="@+id/addButton"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="項目追加"/>
         <ListView
             android:id="@+id/listView1"
             android:layout_width="match_parent"
