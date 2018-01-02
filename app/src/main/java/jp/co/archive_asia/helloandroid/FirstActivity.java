@@ -32,6 +32,7 @@ public class FirstActivity extends AppCompatActivity {
     LinearLayout menuLayout;
 
     Button toastButton;
+    Button listButton;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -64,6 +65,16 @@ public class FirstActivity extends AppCompatActivity {
                 //toast.setGravity(Gravity.TOP, 100,100);
 
                 toast.show();
+            }
+        });
+
+        //list画面へ
+        listButton = findViewById(R.id.listButton);
+        listButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(FirstActivity.this, SimpleListActivity.class);
+                startActivity(intent);
             }
         });
 
