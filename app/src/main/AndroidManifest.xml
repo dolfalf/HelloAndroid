@@ -48,6 +48,10 @@
             android:name=".SimpleListActivity"
             android:label="listView actitvity">
         </activity>
+        <activity
+            android:name=".SimpleGridActivity"
+            android:label="gridView actitvity">
+        </activity>
     </application>
 
 </manifest>
