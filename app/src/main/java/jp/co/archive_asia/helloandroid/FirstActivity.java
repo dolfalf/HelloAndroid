@@ -33,6 +33,7 @@ public class FirstActivity extends AppCompatActivity {
 
     Button toastButton;
     Button listButton;
+    Button gridButton;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -74,6 +75,16 @@ public class FirstActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(FirstActivity.this, SimpleListActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        //grid画面へ
+        gridButton = findViewById(R.id.gridButton);
+        gridButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(FirstActivity.this, SimpleGridActivity.class);
                 startActivity(intent);
             }
         });

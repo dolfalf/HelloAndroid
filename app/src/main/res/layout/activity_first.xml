@@ -56,6 +56,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="リストテスト画面へ"/>
+
+            <Button
+                android:id="@+id/gridButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="グリード画面へ"/>
         </LinearLayout>
 
     </LinearLayout>
